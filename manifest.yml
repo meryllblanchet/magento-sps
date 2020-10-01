@@ -1,0 +1,31 @@
+packages:
+  __APP_PACKAGE__:
+    license: Apache-2.0
+    actions:
+      history:
+        function: actions/history/index.js
+        web: 'yes'
+        runtime: 'nodejs:12'
+        inputs:
+          LOG_LEVEL: debug
+        annotations:
+          require-adobe-auth: false
+          final: true
+      rates:
+        function: actions/rates/index.js
+        web: 'yes'
+        runtime: 'nodejs:12'
+        inputs:
+          LOG_LEVEL: debug
+        annotations:
+          require-adobe-auth: false
+          final: true
+      shipment:
+        function: actions/shipment/index.js
+        web: 'yes'
+        runtime: 'nodejs:12'
+        inputs:
+          LOG_LEVEL: debug
+        annotations:
+          require-adobe-auth: false
+          final: true
